@@ -436,6 +436,80 @@ tbody tr:hover {
     padding: 6rem 0;
 }
 
+/* Coaches Section */
+.coaches-section {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.coaches-section h3 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.coach-card {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.coach-card:hover {
+    transform: translateY(-5px);
+}
+
+.coach-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.coach-card:hover .coach-photo {
+    box-shadow: 0 8px 25px rgba(230, 57, 70, 0.4);
+    transform: scale(1.05);
+}
+
+.coach-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coach-placeholder {
+    font-size: 3.5rem;
+    color: white;
+}
+
+.coach-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.coach-title {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -584,6 +658,10 @@ tbody tr:hover {
         grid-template-columns: 1fr;
     }
 
+    .coaches-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .stats {
         grid-template-columns: 1fr;
     }
@@ -622,5 +700,19 @@ tbody tr:hover {
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+
+    .coaches-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .coach-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .coach-placeholder {
+        font-size: 3rem;
     }
 }
